@@ -108,24 +108,15 @@ Para la realización del proyecto contaremos con la adición de sensores además
 </table>
 
 ### Configuración y conexiones 
-Para la configuración de nuestro dispositivo, tenemos que tener en cuenta que el módulo que utilizamos es el ESP32 DEVIKIT V1, teniendo unicamente disponibles los pines 21 y 22 como SDA y SCL respectivamente para el protocolo de comunicación I2C.
-Puesto a que se utiliza la comunicación I2C para ambos sensores estos se tendrán que conectar en paralelo al ESP32, por lo que si se requiere cambiar de sensor tenemos que tener en cuenta añadir su dirección como se verá a continuación.  
 
-
-```c
-void setup(void){
-  Serial.begin(9600);
-  ...
-  BME280.begin(0x76); 
-  SCD40.begin(0x62);
-  ...
-}
-```
-Dicho esto, tenemos el esquema de conexiones entre los sensores y módulos realizados en Fritzing.
+Esquema de conexiones entre los sensores y módulos realizados en Fritzing.
 
 ![Fritzing](./Fritzingconnections.jpeg "Conexiones Fritzing")
 
 #### Conexiones TFT - ESP32
+En caso de que no queramos tener la pantalla del dispositivo encendida de forma prolongada, o queramos que esta se maneje de manera rutinaria desconectar el pin LED del 3V3 del ESP32 y asignar un nuevo pin.
+Tenemos que tener en cuenta que a partir de SDO(MISO) las conexiones se realizan para posterior uso del panel tactil del dispositivo (puede ser omitido).
+
 |       4.0'' TFT     	  |   ESP32   	|
 |:----------------------:	|:---------:	|
 |           VCC          	|    3V3    	|
@@ -143,23 +134,32 @@ Dicho esto, tenemos el esquema de conexiones entre los sensores y módulos reali
 |          T_DO          	| SDO(MISO) 	|
 |          T_IRQ         	|    D27    	|
 
-#### Conexiones SCD40 - ESP32
-| SCD40 	| ESP32 	|
-|:-----:	|:-----:	|
-|  GND  	|  GND  	|
-|  VCC  	|  3V3  	|
-|  SCL  	|   22  	|
-|  SDA  	|   21  	|
+#### Conexiones BME - SCD40 - ESP32
+Para la configuración de nuestro dispositivo, tenemos que tener en cuenta que el módulo que utilizamos es el ESP32 DEVIKIT V1, teniendo unicamente disponibles los pines 21 y 22 como SDA y SCL respectivamente para el protocolo de comunicación I2C.
 
-#### Conexiones BME280 - ESP32
-| BME280 	| ESP32 	|
-|:------:	|:-----:	|
-|   VIN  	|  3V3  	|
-|   GND  	|  GND  	|
-|   SCL  	|   22  	|
-|   SDA  	|   21  	|
+
+| BME280 	| SCD40 	| ESP32 	|
+|:-----:	|:-----:	|:-----:	|
+|  GND  	|  GND  	|   GND   |
+|  VCC  	|  VCC  	|   3V3   |
+|  SCL  	|   SCL  	|   22    |
+|  SDA  	|   SDA  	|   21    |
+
+Puesto a que se utiliza la comunicación I2C para ambos sensores estos se tendrán que conectar en paralelo al ESP32, por lo que si se requiere cambiar de sensor tenemos que tener en cuenta añadir su dirección como se verá a continuación.  
+
+```c
+void setup(void){
+  Serial.begin(9600);
+  ...
+  BME280.begin(0x76); 
+  SCD40.begin(0x62);
+  ...
+}
+```
 
 #### Conexiones PMS5003T - ESP32
+
+Si posee una fuente adicional de 5V de preferencia conectar a esta, en lugar de la fuente de ESP32.
 | PMS5003T 	|  ESP32  	|
 |:--------:	|:-------:	|
 |    GND   	|   GND   	|
