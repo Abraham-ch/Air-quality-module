@@ -167,6 +167,16 @@ Dicho esto, tenemos el esquema de conexiones entre los sensores y módulos reali
 |    RX    	|   TX2   	|
 |    TX    	|   RX2   	|
 
+### Requisitos del Dispositivo:
+
+* Conexión a Internet para comunicarse con la plataforma MQTT HiveMQ.
+* Alimentación a través de conexión micro USB de 5V.
+* No es resistente al agua ni debe estar sumergido.
+
+### Comunicación:
+
+Se utilizará la plataforma MQTT HiveMQ como broker para las comunicaciones del dispositivo.
+
 ### Despliegue
 Una vez realizado las conexiones, el proyecto se reduce al ensamble de este y a la realización del código. A continuación una muestra del producto en bruto.
 
