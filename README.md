@@ -1,14 +1,14 @@
-# Documentación “Breath Project”
-## Introducción
-Para desarrollar una ciudad inteligente es necesaria una buena calidad de aire, siendo esta fundamental para la salud y el bienestar de los ciudadanos. Los niveles altos de contaminación en el aire pueden tener efectos negativos en la salud, como problemas respiratorios, enfermedades cardiovasculares, cáncer y otras enfermedades crónicas. La propuesta Breath fue planteada para tomar medidas para reducir la contaminación del aire y mejorar la calidad de vida de los ciudadanos promoviendo el uso de energías renovables y fomentar el transporte público y la movilidad sostenible.
-## Descripción
-Breath es un proyecto dedicado al monitoreo de la calidad del aire, consiste en un dispositivo IOT que contiene sensores como el PMS, BME280, SCD40,  siendo capaz de hacer lecturas de la concentración de humedad, temperatura, partículas PM10, PM2.5 y diversos gases que en concentraciones altas podrían llegar a ser nocivas para el ser humano, o causar irritación y dificultades respiratorias. El proyecto se desarrolló de manera que sea escalable y compacto, debido a su bajo costo este dispositivo será capaz de desplegarse en diversos escenarios de manera que abarque lugares concurridos, instalaciones industriales e interiores, solo necesitando de una entrada de corriente y wifi, por lo que si se requiere puede llegar a ser portátil, una vez desplegado los datos serán mostrados por una pantalla LCD o si se requiere de manera virtual indicando las concentraciones mediante gráficos y guardándose los datos a la nube para su posterior uso como investigación, seguimiento y pronóstico.
+# Breath Project Documentation
+## Introduction
+To develop a smart city, good air quality is essential, as it is fundamental for the health and well-being of citizens. High levels of air pollution can have negative effects on health, such as respiratory problems, cardiovascular diseases, cancer, and other chronic conditions. The Breath proposal was designed to take measures to reduce air pollution and improve the quality of life for citizens by promoting the use of renewable energy, and encouraging public transportation and sustainable mobility.
+## Description
+Breath is a project dedicated to air quality monitoring. It consists of an IoT device that contains sensors such as PMS, BME280, and SCD40, capable of measuring humidity, temperature, PM10 and PM2.5 particle concentrations, and various gases that, at high concentrations, could be harmful to humans or cause irritation and respiratory difficulties. The project was developed to be scalable and compact. Due to its low cost, this device can be deployed in various settings, covering crowded places, industrial facilities, and indoor environments. It only requires a power source and WiFi, making it portable if needed. Once deployed, the data will be displayed on an LCD screen or, if required, virtually, showing concentrations through graphs and storing data in the cloud for later use, such as research, monitoring, and forecasting.
 
-## Dispositivo Breath
-El objetivo del proyecto se centra en proporcionar información en tiempo real de la calidad del aire, esto surgió debido a la gran brecha de contaminación en el Perú además de la pobre concientización de esta en Lima.
+## Breath Device
+The project's goal is to provide real-time information on air quality. This need arose due to the significant pollution gap in Peru, along with the poor awareness of this issue in Lima.
 
-### Selección de tecnología
-Para la realización del proyecto contaremos con la adición de sensores además de un micronotrolador y una pantalla LCD.
+### Technology Selection
+For the project, we will include sensors in addition to a microcontroller and an LCD screen.
 
 
 <!-- TABLES -->
@@ -17,9 +17,9 @@ Para la realización del proyecto contaremos con la adición de sensores además
 <thead>
   <tr>
     <th class="tg-0pky"></th>
-    <th class="tg-9wq8">Módulo</th>
-    <th class="tg-9wq8">Voltaje de<br>entrada</th>
-    <th class="tg-9wq8">Voltaje de salida</th>
+    <th class="tg-9wq8">Module</th>
+    <th class="tg-9wq8">Input Voltage</th>
+    <th class="tg-9wq8">Output Voltage</th>
   </tr>
 </thead>
 <tbody>
@@ -43,10 +43,10 @@ Para la realización del proyecto contaremos con la adición de sensores además
   <tr>
     <th class="tg-0pky" colspan="2"></th>
     <th class="tg-9wq8">Sensor</th>
-    <th class="tg-9wq8">Mediciones</th>
-    <th class="tg-9wq8">Rango de medición</th>
+    <th class="tg-9wq8">Measures</th>
+    <th class="tg-9wq8">Measurement Range</th>
     <th class="tg-nrix">Error</th>
-    <th class="tg-nrix">Rango de voltaje</th>
+    <th class="tg-nrix">Voltage Range</th>
   </tr>
 </thead>
 <tbody>
@@ -59,30 +59,30 @@ Para la realización del proyecto contaremos con la adición de sensores además
     <td class="tg-nrix" rowspan="3">[2.4, 5.5] V</td>
   </tr>
   <tr>
-    <td class="tg-nrix">Humedad<br>Relativa</td>
+    <td class="tg-nrix">Relative<br>Humidity</td>
     <td class="tg-nrix">[0,100] %RH</td>
     <td class="tg-nrix">± 9% RH</td>
   </tr>
   <tr>
-    <td class="tg-nrix">Temperatura</td>
+    <td class="tg-nrix">Temperature</td>
     <td class="tg-nrix">[-10, 60]°C</td>
     <td class="tg-nrix">± 1.5°C</td>
   </tr>
   <tr>
     <td class="tg-0lax" colspan="2" rowspan="3"><img src="https://cdn.shopify.com/s/files/1/1509/1638/products/gy-bme280-barometrischer-sensor-fur-temperatur-luftfeuchtigkeit-und-luftdruck-438688_1024x.jpg?v=1679398687" alt="BME280" width="100" height="100"></td>
     <td class="tg-nrix" rowspan="3">BME280</td>
-    <td class="tg-nrix">Presión<br>amtomsférica</td>
+    <td class="tg-nrix">Atmospheric<br>pressure</td>
     <td class="tg-nrix">[300, 1100] hPa</td>
     <td class="tg-nrix">± 5% hPa</td>
     <td class="tg-nrix" rowspan="3">[1.71, 3.6] V</td>
   </tr>
   <tr>
-    <td class="tg-9wq8">Humedad<br>Relativa</td>
+    <td class="tg-9wq8">Relative<br>Humidity</td>
     <td class="tg-9wq8">[0,100] %RH</td>
     <td class="tg-nrix">± 9% RH</td>
   </tr>
   <tr>
-    <td class="tg-nrix">Temperatura</td>
+    <td class="tg-nrix">Temperature</td>
     <td class="tg-nrix">[-40, 85]°C</td>
     <td class="tg-nrix">± 1.5°C</td>
   </tr>
@@ -107,15 +107,15 @@ Para la realización del proyecto contaremos con la adición de sensores además
 </tbody>
 </table>
 
-### Configuración y conexiones 
+### Configuration and Connections
 
-Esquema de conexiones entre los sensores y módulos realizados en Fritzing.
+Schematic of connections between the sensors and modules created in Fritzing.
 
 ![Fritzing](./Fritzingconnections.jpeg "Conexiones Fritzing")
 
-#### Conexiones TFT - ESP32
-En caso de que no queramos tener la pantalla del dispositivo encendida de forma prolongada, o queramos que esta se maneje de manera rutinaria desconectar el pin LED del 3V3 del ESP32 y asignar un nuevo pin.
-Tenemos que tener en cuenta que a partir de SDO(MISO) las conexiones se realizan para posterior uso del panel tactil del dispositivo (puede ser omitido).
+#### Connections TFT - ESP32
+In case we do not want the device screen to be continuously on or want it to be managed routinely, disconnect the LED pin from the 3V3 of the ESP32 and assign a new pin.
+We need to keep in mind that from SDO (MISO), the connections are made for the subsequent use of the device's touchscreen panel (which can be omitted).
 
 |       4.0'' TFT     	  |   ESP32   	|
 |:----------------------:	|:---------:	|
@@ -134,9 +134,8 @@ Tenemos que tener en cuenta que a partir de SDO(MISO) las conexiones se realizan
 |          T_DO          	| SDO(MISO) 	|
 |          T_IRQ         	|    D27    	|
 
-#### Conexiones BME - SCD40 - ESP32
-Para la configuración de nuestro dispositivo, tenemos que tener en cuenta que el módulo que utilizamos es el ESP32 DEVIKIT V1, teniendo unicamente disponibles los pines 21 y 22 como SDA y SCL respectivamente para el protocolo de comunicación I2C.
-
+#### Connections BME - SCD40 - ESP32
+For configuring our device, we need to consider that the module we are using is the ESP32 DEVKIT V1, with only pins 21 and 22 available as SDA and SCL respectively for the I2C communication protocol.
 
 | BME280 	| SCD40 	| ESP32 	|
 |:-----:	|:-----:	|:-----:	|
@@ -145,7 +144,7 @@ Para la configuración de nuestro dispositivo, tenemos que tener en cuenta que e
 |  SCL  	|   SCL  	|   22    |
 |  SDA  	|   SDA  	|   21    |
 
-Puesto a que se utiliza la comunicación I2C para ambos sensores estos se tendrán que conectar en paralelo al ESP32, por lo que si se requiere cambiar de sensor tenemos que tener en cuenta añadir su dirección como se verá a continuación.  
+Since I2C communication is used for both sensors, they must be connected in parallel to the ESP32. If you need to change a sensor, remember to add its address as will be shown below.  
 
 ```c
 void setup(void){
@@ -157,9 +156,10 @@ void setup(void){
 }
 ```
 
-#### Conexiones PMS5003T - ESP32
+#### Connections PMS5003T - ESP32
 
-Si posee una fuente adicional de 5V de preferencia conectar a esta, en lugar de la fuente de ESP32.
+If you have an additional 5V power source, it is preferable to connect it instead of the ESP32 power supply.
+
 | PMS5003T 	|  ESP32  	|
 |:--------:	|:-------:	|
 |    GND   	|   GND   	|
@@ -167,18 +167,18 @@ Si posee una fuente adicional de 5V de preferencia conectar a esta, en lugar de 
 |    RX    	|   TX2   	|
 |    TX    	|   RX2   	|
 
-### Requisitos del Dispositivo:
+### Device Requirements:
 
-* Conexión a Internet para comunicarse con la plataforma MQTT HiveMQ.
-* Alimentación a través de conexión micro USB de 5V.
-* No es resistente al agua ni debe estar sumergido.
+* Internet connection to communicate with the HiveMQ MQTT platform.
+* Power supply through a 5V micro USB connection.
+* Not water-resistant and should not be submerged.
 
-### Comunicación:
+### Communication:
 
-Se utilizará la plataforma MQTT HiveMQ como broker para las comunicaciones del dispositivo.
+The HiveMQ MQTT platform will be used as the broker for device communications.
 
-### Despliegue
-Una vez realizado las conexiones, el proyecto se reduce al ensamble de este y a la realización del código. A continuación una muestra del producto en bruto.
+### Deployment
+Once the connections are made, the project involves assembling the device and writing the code. Below is a sample of the raw product.
 
 ![Breath breadboard example](./muestrabreathbruto.jpg "Breadboard example")
 
