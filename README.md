@@ -1,4 +1,4 @@
-# Breath Project Documentation
+# Documentation
 ## Introduction
 To develop a smart city, good air quality is essential, as it is fundamental for the health and well-being of citizens. High levels of air pollution can have negative effects on health, such as respiratory problems, cardiovascular diseases, cancer, and other chronic conditions. The Breath proposal was designed to take measures to reduce air pollution and improve the quality of life for citizens by promoting the use of renewable energy, and encouraging public transportation and sustainable mobility.
 ## Description
